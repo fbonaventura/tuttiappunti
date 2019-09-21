@@ -1,0 +1,21 @@
+{
+  "description": "tutti appunti backend",
+  "require": {
+    "twig/twig": "^2",
+    "php": "^7.2",
+    "ext-pdo": "*",
+  "ext-pdo_mysql": "*"
+},
+"authors": [
+{
+"name": "Francesco Boanvetura",
+"email": "867924@stud.unive.it"
+}
+],
+"minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "tuttiAppunti\\": "src/"
+    }
+  }
+}
