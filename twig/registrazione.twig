@@ -1,0 +1,35 @@
+{% extends 'base-page.twig' %}
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm col-md-6">
+                <h1>Registrazione</h1>
+                <span style="color: red">{{ message }}</span>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="matricolaInput">Matricola</label>
+                        <input type="number" name="matricola" class="form-control" id="matricolaInput" placeholder="000000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nomeInput">Nome</label>
+                        <input type="text" name="nome" class="form-control" id="nomeInput" placeholder="Mario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cognomeInput">Cognome</label>
+                        <input type="text" name="cognome" class="form-control" id="cognomeInput" placeholder="Rossi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordInput">Password</label>
+                        <input type="password" name="password" class="form-control" id="passwordInput" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordInput2">Password (di nuovo)</label>
+                        <input type="password" name="password2" class="form-control" id="passwordInput2" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrazione</button>
+                </form>
+                <a href="login.php">Hai già un account? Effettua il login!</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

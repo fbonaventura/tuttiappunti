@@ -1,0 +1,22 @@
+{% extends 'base-page.twig' %}
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm col-md-6">
+                <h1>Aggiungi corso</h1>
+                <span style="color: red">{{ message }}</span>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="codiceInput">Codice</label>
+                        <input type="text" name="codice" class="form-control" id="codiceInput" placeholder="CT0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="nomeInput">Nome</label>
+                        <input type="text" name="nome" class="form-control" id="nomeInput" placeholder="Lorem ipsum">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Aggiungi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

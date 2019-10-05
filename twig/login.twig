@@ -1,0 +1,23 @@
+{% extends 'base-page.twig' %}
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm col-md-6">
+                <h1>Login</h1>
+                <span style="color: red">{{ message }}</span>
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="matricolaInput">Matricola</label>
+                        <input type="number" name="matricola" class="form-control" id="matricolaInput" placeholder="000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordInput">Password</label>
+                        <input type="password" name="password" class="form-control" id="passwordInput" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                <a href="registrazione.php">Non hai un account? Registrati!</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

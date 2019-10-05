@@ -1,0 +1,13 @@
+{% extends 'base-page.twig' %}
+{% block content %}
+    <h1>{{ corso.codice }} - {{ corso.nome }}</h1>
+
+    <h4>Lezioni</h4>
+    <ul>
+        {% for lezione in lezioni %}
+            <li>
+                <a href="lezione.php?id={{ lezione.id|url_encode }}">{{ lezione.data }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

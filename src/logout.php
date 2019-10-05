@@ -5,4 +5,5 @@ require_once __DIR__ . '/../vendor/autoload.php'; //serve per far trovare le cla
 
 use tuttiAppunti\Utils;
 
-Utils::twigRender('index.twig');
+Utils::logUserOut();
+Utils::tempRedirect('/');
