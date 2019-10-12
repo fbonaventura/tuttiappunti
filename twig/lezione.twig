@@ -1,0 +1,16 @@
+{% extends 'base-page.twig' %}
+{% block content %}
+    <h1>Lezione {{ lezione.data }}</h1>
+    <h2>{{ lezione.corso.codice }} - {{ lezione.corso.nome }}</h2>
+
+    {% if user %}
+        <a href="aggiungiAppunto.php?lezione={{ lezione.id }}" class="btn btn-primary active" role="button"
+           aria-pressed="true">Aggiungi appunto</a>
+    {% endif %}
+    <h4>Appunti</h4>
+    {% for appunto in appunti %}
+        {% include 'appunto.twig' %}
+    {% else %}
+        <i>Nessun appunto per questa lezione</i>
+    {% endfor %}
+{% endblock %}

@@ -2,6 +2,9 @@
 {% block content %}
     <h1>{{ corso.codice }} - {{ corso.nome }}</h1>
 
+    {% if user %}
+        <a href="aggiungiLezione.php?corso={{ corso.codice|url_encode }}" class="btn btn-primary active" role="button" aria-pressed="true">Aggiungi lezione</a>
+    {% endif %}
     <h4>Lezioni</h4>
     <ul>
         {% for lezione in lezioni %}

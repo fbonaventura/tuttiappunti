@@ -32,7 +32,14 @@ class Utils {
 
     public static function redirectIfLogged() : void {
         if(self::loggedUser() !== null) {
-           self::tempRedirect('/');
+            self::tempRedirect('/');
+        }
+    }
+
+
+    public static function redirectIfNotLogged() : void {
+        if(self::loggedUser() === null) {
+            self::tempRedirect('/');
         }
     }
 

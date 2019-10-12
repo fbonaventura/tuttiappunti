@@ -1,0 +1,9 @@
+{% extends 'base-page.twig' %}
+{% block content %}
+    <h1>Ricerca di "{{ q }}"</h1>
+    {% for appunto in appunti %}
+        {% include 'appunto.twig' %}
+    {% else %}
+        <i>La ricerca non ha prodotto alcun risultato</i>
+    {% endfor %}
+{% endblock %}

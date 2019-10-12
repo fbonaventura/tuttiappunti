@@ -6,6 +6,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use tuttiAppunti\DatabaseUtils;
 use tuttiAppunti\Utils;
 
+Utils::redirectIfNotLogged();
 
 if (!empty($_POST['codice']) && !empty($_POST['nome'])) {
     $stmt = DatabaseUtils::connect()->prepare("INSERT INTO Corso(codice, nome) VALUES(?,?)");

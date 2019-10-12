@@ -1,0 +1,18 @@
+{% extends 'base-page.twig' %}
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm col-md-6">
+                <h1>Aggiungi lezione</h1>
+                <span style="color: red">{{ message }}</span>
+                <form method="POST" action="?corso={{ corso|url_encode }}">
+                    <div class="form-group">
+                        <label for="dataInput">Data</label>
+                        <input type="date" name="data" class="form-control" id="dataInput" placeholder="0000-00-00">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Aggiungi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

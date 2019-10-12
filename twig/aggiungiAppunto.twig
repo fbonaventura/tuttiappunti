@@ -1,0 +1,22 @@
+{% extends 'base-page.twig' %}
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm col-md-6">
+                <h1>Aggiungi appunto</h1>
+                <span style="color: red">{{ message }}</span>
+                <form method="POST" action="?lezione={{ lezione }}">
+                    <div class="form-group">
+                        <label for="argomentoInput">Argomento</label>
+                        <input type="text" name="argomento" class="form-control" id="argomentoInput" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="testoInput">Testo</label>
+                        <textarea class="form-control" name="testo" id="testoInput" rows="10" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Aggiungi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -10,7 +10,7 @@ Utils::redirectIfLogged();
 
 if (isset($_POST['matricola'], $_POST['password'])) {
     $stmt = DatabaseUtils::connect()->prepare("SELECT password FROM Utente WHERE matricola=?");
-    $matricola = intval($_POST['matricola']);
+    $matricola = intval($_POST['matricola']     );
     $stmt->bindValue(1, $matricola);
     $stmt->execute();
 
