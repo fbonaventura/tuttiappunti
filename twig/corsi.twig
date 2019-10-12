@@ -3,11 +3,16 @@
     {% if user %}
         <a href="aggiungiCorso.php" class="btn btn-primary active" role="button" aria-pressed="true">Aggiungi corso</a>
     {% endif %}
+    <br>
+    <br>
+    <h4>Corsi</h4>
     <ul>
         {% for corso in corsi %}
             <li>
                 <a href="corso.php?corso={{ corso.codice|url_encode }}">{{ corso.codice }} - {{ corso.nome }}</a>
             </li>
+        {% else %}
+            <i>Non ci sono ancora corsi</i>
         {% endfor %}
     </ul>
 {% endblock %}

@@ -31,7 +31,10 @@ if (!empty($_POST['data'])) {
             throw $e;
         }
     }
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $message = 'Dati mancanti';
 }
+
 Utils::twigRender('aggiungiLezione.twig', [
     'corso' => $corso,
     'message' => $message ?? null

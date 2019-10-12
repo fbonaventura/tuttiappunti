@@ -25,6 +25,8 @@ if (!empty($_POST['codice']) && !empty($_POST['nome'])) {
             throw $e;
         }
     }
+} elseif($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $message = 'Dati mancanti';
 }
 Utils::twigRender('aggiungiCorso.twig', [
     'message' => $message ?? null

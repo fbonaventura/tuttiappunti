@@ -5,12 +5,16 @@
     {% if user %}
         <a href="aggiungiLezione.php?corso={{ corso.codice|url_encode }}" class="btn btn-primary active" role="button" aria-pressed="true">Aggiungi lezione</a>
     {% endif %}
+    <br>
+    <br>
     <h4>Lezioni</h4>
     <ul>
         {% for lezione in lezioni %}
             <li>
                 <a href="lezione.php?id={{ lezione.id|url_encode }}">{{ lezione.data }}</a>
             </li>
+            {% else %}
+            <i>Non esiste ancora nessuna lezione per questo corso</i>
         {% endfor %}
     </ul>
 {% endblock %}

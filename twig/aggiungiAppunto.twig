@@ -8,11 +8,11 @@
                 <form method="POST" action="?lezione={{ lezione }}">
                     <div class="form-group">
                         <label for="argomentoInput">Argomento</label>
-                        <input type="text" name="argomento" class="form-control" id="argomentoInput" required>
+                        <input type="text" name="argomento" class="form-control" id="argomentoInput" maxlength="255" required>
                     </div>
                     <div class="form-group">
                         <label for="testoInput">Testo</label>
-                        <textarea class="form-control" name="testo" id="testoInput" rows="10" required></textarea>
+                        <textarea class="form-control" name="testo" id="testoInput" rows="10" maxlength="65535" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Aggiungi</button>
                 </form>

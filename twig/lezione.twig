@@ -7,6 +7,8 @@
         <a href="aggiungiAppunto.php?lezione={{ lezione.id }}" class="btn btn-primary active" role="button"
            aria-pressed="true">Aggiungi appunto</a>
     {% endif %}
+    <br>
+    <br>
     <h4>Appunti</h4>
     {% for appunto in appunti %}
         {% include 'appunto.twig' %}

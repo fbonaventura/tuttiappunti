@@ -24,7 +24,10 @@ if (!empty($_POST['argomento']) && !empty($_POST['testo'])) {
     $stmt->execute();
 
     Utils::tempRedirect('/lezione.php?id=' . $lezione);
+} elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $message = 'Dati mancanti';
 }
+
 Utils::twigRender('aggiungiAppunto.twig', [
     'lezione' => $lezione,
     'message' => $message ?? null
