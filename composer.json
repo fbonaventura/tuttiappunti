@@ -1,7 +1,7 @@
 {
   "description": "tutti appunti backend",
   "require": {
-    "twig/twig": "^2",
+    "twig/twig": "^3",
     "php": "^7.2",
     "ext-pdo": "*",
   "ext-pdo_mysql": "*"
